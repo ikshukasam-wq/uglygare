@@ -1,0 +1,905 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>WELCOM 2 MY WEBSIT!!!! BEST SITE 2026 (AWARD WINNING)</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Comic+Neue:wght@700&family=Press+Start+2P&display=swap');
+
+  :root {
+    --blink-speed: 0.3s;
+  }
+
+  * { box-sizing: border-box; }
+
+  html {
+    min-width: 5000px;
+    overflow-x: scroll;
+    cursor: none !important;
+  }
+
+  body {
+    margin: 0;
+    padding: 0;
+    background-color: #FF00FF;
+    background-image:
+      repeating-linear-gradient(45deg, #00FF00 0px, #00FF00 10px, #FF00FF 10px, #FF00FF 20px),
+      url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100'%3E%3Ccircle cx='50' cy='50' r='40' fill='%23FF0000' opacity='0.3'/%3E%3C/svg%3E");
+    font-family: 'Comic Neue', 'Comic Sans MS', cursive;
+    min-height: 100vh;
+    animation: bgShift 0.5s infinite;
+  }
+
+  @keyframes bgShift {
+    0% { background-color: #FF00FF; }
+    25% { background-color: #00FF00; }
+    50% { background-color: #FF6600; }
+    75% { background-color: #0000FF; }
+    100% { background-color: #FF00FF; }
+  }
+
+  /* CUSTOM CURSOR - Giant Taco */
+  #custom-cursor {
+    position: fixed;
+    width: 80px;
+    height: 80px;
+    font-size: 60px;
+    pointer-events: none;
+    z-index: 99999;
+    transform: translate(-10px, -10px);
+    transition: none;
+    line-height: 1;
+    user-select: none;
+  }
+
+  /* HEADER MARQUEES */
+  .marquee-container {
+    background: #FF0000;
+    overflow: hidden;
+    border: 5px solid #FFFF00;
+  }
+  .marquee-line {
+    display: flex;
+    white-space: nowrap;
+    animation: marqueeLeft 4s linear infinite;
+    font-size: 28px;
+    font-weight: 900;
+    color: #FFFF00;
+    text-shadow: 3px 3px 0 #000, -3px -3px 0 #FF00FF;
+    padding: 5px 0;
+  }
+  .marquee-line:nth-child(2) {
+    animation: marqueeRight 6s linear infinite;
+    color: #00FFFF;
+    font-size: 22px;
+  }
+  .marquee-line:nth-child(3) {
+    animation: marqueeLeft 2s linear infinite;
+    color: #FF6600;
+    font-size: 36px;
+  }
+  @keyframes marqueeLeft {
+    from { transform: translateX(100vw); }
+    to { transform: translateX(-200%); }
+  }
+  @keyframes marqueeRight {
+    from { transform: translateX(-200%); }
+    to { transform: translateX(100vw); }
+  }
+
+  /* MAIN LAYOUT */
+  .main-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 20px;
+    gap: 20px;
+    width: 5000px;
+  }
+
+  /* BLINKING TITLE */
+  h1 {
+    font-family: 'Press Start 2P', monospace;
+    font-size: 72px;
+    color: #FFFF00;
+    text-shadow:
+      5px 5px 0 #FF0000,
+      10px 10px 0 #00FF00,
+      15px 15px 0 #0000FF;
+    animation: blink var(--blink-speed) step-start infinite, titleSpin 20s linear infinite;
+    transform-origin: center;
+    text-align: center;
+    width: 100%;
+  }
+  @keyframes blink {
+    0%, 49% { opacity: 1; }
+    50%, 100% { opacity: 0; }
+  }
+  @keyframes titleSpin {
+    0% { transform: rotate(0deg) scale(1); }
+    25% { transform: rotate(2deg) scale(1.05); }
+    50% { transform: rotate(0deg) scale(1); }
+    75% { transform: rotate(-2deg) scale(0.95); }
+    100% { transform: rotate(0deg) scale(1); }
+  }
+
+  /* CONTENT PANELS */
+  .content-row {
+    display: flex;
+    gap: 30px;
+    align-items: flex-start;
+    width: 4900px;
+    flex-wrap: nowrap;
+  }
+
+  .panel {
+    background: #0000FF;
+    border: 8px dashed #FF0000;
+    padding: 20px;
+    min-width: 400px;
+    transform: rotate(-2deg);
+    position: relative;
+  }
+  .panel:nth-child(2) { background: #008000; transform: rotate(3deg); }
+  .panel:nth-child(3) { background: #800080; transform: rotate(-1.5deg); }
+  .panel:nth-child(4) { background: #FF4500; transform: rotate(2.5deg); }
+  .panel:nth-child(5) { background: #008080; transform: rotate(-3deg); }
+  .panel:nth-child(6) { background: #DC143C; transform: rotate(1deg); }
+
+  .panel h2 {
+    font-family: 'Press Start 2P', monospace;
+    font-size: 18px;
+    color: #FF0000;
+    background: #FFFF00;
+    padding: 5px;
+    text-shadow: 2px 2px 0 #00FF00;
+    animation: blink 0.7s step-start infinite;
+  }
+
+  .panel p, .panel label {
+    color: #FFFF00;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 1.8;
+  }
+
+  /* FORM ELEMENTS FROM HELL */
+  input[type="text"], input[type="email"], textarea {
+    background: #FFFF00;
+    color: #FFFF00; /* same as bg = invisible */
+    border: 4px solid #FF00FF;
+    font-family: 'Comic Neue', cursive;
+    font-size: 16px;
+    padding: 8px;
+    width: 100%;
+    transition: color 3s ease; /* delayed reveal */
+  }
+  input[type="text"]:focus, input[type="email"]:focus, textarea:focus {
+    color: #FFFF01; /* almost invisible */
+    background: #FFFFE0;
+    outline: 10px solid #FF0000;
+  }
+
+  /* PHONE SLIDER */
+  .phone-slider-container {
+    padding: 10px;
+    background: #333;
+    border-radius: 8px;
+  }
+  #phone-slider {
+    width: 100%;
+    -webkit-appearance: none;
+    height: 30px;
+    background: linear-gradient(to right, #FF00FF, #00FF00, #FF0000, #0000FF, #FFFF00);
+    cursor: none;
+  }
+  #phone-display {
+    font-family: 'Press Start 2P', monospace;
+    font-size: 14px;
+    color: #00FF00;
+    background: #000;
+    padding: 10px;
+    margin-top: 8px;
+    text-align: center;
+    letter-spacing: 2px;
+    animation: blink 2s step-start infinite;
+  }
+
+  /* BUTTONS */
+  .evil-btn {
+    font-family: 'Press Start 2P', monospace;
+    font-size: 16px;
+    padding: 15px 30px;
+    background: #FF0000;
+    color: #FFFF00;
+    border: 5px solid #00FF00;
+    cursor: none;
+    transition: all 2s ease; /* 2 second hover delay */
+    display: block;
+    margin: 10px auto;
+    text-transform: uppercase;
+    position: relative;
+    animation: btnShake 0.5s infinite;
+  }
+  @keyframes btnShake {
+    0% { transform: translate(0,0); }
+    25% { transform: translate(2px,-1px); }
+    50% { transform: translate(-1px,2px); }
+    75% { transform: translate(1px,1px); }
+    100% { transform: translate(0,0); }
+  }
+  .evil-btn:hover {
+    background: #0000FF;
+    color: #FF00FF;
+    transform: rotate(180deg) scale(2);
+    transition: all 2s ease;
+  }
+
+  /* HIDDEN NAV that moves */
+  #floating-nav {
+    position: fixed;
+    background: #FF0000;
+    border: 5px solid #FFFF00;
+    padding: 10px;
+    z-index: 9000;
+    top: 100px;
+    left: 100px;
+    font-family: 'Press Start 2P', monospace;
+    font-size: 10px;
+  }
+  #floating-nav a {
+    display: block;
+    color: #FFFF00;
+    text-decoration: blink;
+    padding: 5px;
+    margin: 2px;
+    cursor: none;
+    transition: color 2s ease;
+  }
+  #floating-nav a:hover { color: #FF00FF; }
+
+  /* CPU MONITOR */
+  #cpu-monitor {
+    position: fixed;
+    bottom: 10px;
+    left: 10px;
+    background: #000;
+    color: #FF0000;
+    font-family: 'Press Start 2P', monospace;
+    font-size: 10px;
+    padding: 10px;
+    border: 3px solid #FF0000;
+    z-index: 9999;
+    animation: blink 1s step-start infinite;
+  }
+
+  /* CAPTCHA OVERLAY */
+  #captcha-overlay {
+    display: none;
+    position: fixed;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: rgba(255,0,255,0.95);
+    z-index: 99998;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    font-family: 'Press Start 2P', monospace;
+  }
+  #captcha-overlay.show { display: flex; }
+  .captcha-box {
+    background: #000;
+    border: 8px solid #FFFF00;
+    padding: 30px;
+    text-align: center;
+    max-width: 600px;
+  }
+  .captcha-box h3 {
+    color: #FF0000;
+    font-size: 18px;
+    animation: blink 0.4s step-start infinite;
+  }
+  .captcha-box p { color: #00FF00; font-size: 12px; line-height: 2; }
+  .captcha-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 80px);
+    gap: 5px;
+    margin: 15px auto;
+    justify-content: center;
+  }
+  .captcha-cell {
+    width: 80px;
+    height: 80px;
+    cursor: none;
+    border: 3px solid #FFFF00;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 30px;
+  }
+  .captcha-cell:hover { border-color: #FF00FF; background: #333; }
+  .captcha-cell.selected { border-color: #00FF00; background: #004400; }
+
+  /* CONFIRMATION MODAL */
+  #confirm-modal {
+    display: none;
+    position: fixed;
+    top: 50%; left: 50%;
+    transform: translate(-50%, -50%);
+    background: #000;
+    border: 8px solid #FF0000;
+    padding: 30px;
+    z-index: 99999;
+    font-family: 'Press Start 2P', monospace;
+    text-align: center;
+    min-width: 400px;
+  }
+  #confirm-modal.show { display: block; }
+  #confirm-modal p { color: #FFFF00; font-size: 14px; line-height: 2; }
+  #confirm-modal button {
+    font-family: 'Press Start 2P', monospace;
+    font-size: 12px;
+    padding: 10px 20px;
+    margin: 5px;
+    cursor: none;
+    background: #FF0000;
+    color: #FFFF00;
+    border: 3px solid #FFFF00;
+  }
+
+  /* PROGRESS BAR */
+  #progress-bar-container {
+    display: none;
+    width: 100%;
+    background: #000;
+    border: 3px solid #FF0000;
+    margin-top: 10px;
+  }
+  #progress-bar-container.show { display: block; }
+  #progress-bar {
+    height: 30px;
+    width: 0%;
+    background: linear-gradient(to right, #FF0000, #FF6600, #FFFF00);
+    transition: width 0.1s linear;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Press Start 2P', monospace;
+    font-size: 10px;
+    color: #000;
+  }
+
+  /* POPUP WARNINGS */
+  .mouse-warning {
+    position: fixed;
+    background: #FF0000;
+    color: #FFFF00;
+    font-family: 'Press Start 2P', monospace;
+    font-size: 9px;
+    padding: 8px 12px;
+    border: 3px solid #FFFF00;
+    pointer-events: none;
+    z-index: 9998;
+    animation: blink 0.8s step-start infinite;
+  }
+
+  /* DARK MODE TOGGLE */
+  #dark-mode-btn {
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    z-index: 9990;
+    background: #FFFF00;
+    color: #FFFF00; /* invisible label on purpose */
+    border: none;
+    padding: 10px 20px;
+    font-family: 'Press Start 2P', monospace;
+    font-size: 8px;
+    cursor: none;
+  }
+  body.dark-mode {
+    background-color: #0a0a0a !important;
+    animation: none;
+  }
+  body.dark-mode .marquee-line { color: #111; }
+
+  /* FOOTER */
+  footer {
+    background: #000;
+    color: #333; /* low contrast on purpose */
+    padding: 20px;
+    font-size: 8px;
+    font-family: 'Press Start 2P', monospace;
+    width: 5000px;
+    margin-top: 200px;
+  }
+
+  /* ROTATING IMAGES / DECORATIONS */
+  .star-decoration {
+    position: fixed;
+    font-size: 40px;
+    animation: starSpin 1s linear infinite;
+    pointer-events: none;
+    z-index: 100;
+  }
+  @keyframes starSpin {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+  }
+
+  /* SCROLL DIRECTION OVERRIDE handled in JS */
+
+  /* CONSTRUCTION GIF EQUIVALENT */
+  .under-construction {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background: #000;
+    padding: 10px;
+    border: 5px dashed #FFFF00;
+    margin: 10px 0;
+  }
+  .cone { font-size: 40px; animation: coneBounce 0.3s ease-in-out infinite alternate; }
+  @keyframes coneBounce {
+    from { transform: translateY(0); }
+    to { transform: translateY(-10px); }
+  }
+  .under-construction span {
+    font-family: 'Press Start 2P', monospace;
+    font-size: 14px;
+    color: #FFFF00;
+    animation: blink 0.4s step-start infinite;
+  }
+
+  /* VIBRATING TEXT */
+  .vibrate {
+    animation: vibrate 0.1s linear infinite;
+    display: inline-block;
+  }
+  @keyframes vibrate {
+    0% { transform: translate(0,0); }
+    20% { transform: translate(-2px, 2px); }
+    40% { transform: translate(2px, -2px); }
+    60% { transform: translate(-2px, -2px); }
+    80% { transform: translate(2px, 2px); }
+    100% { transform: translate(0, 0); }
+  }
+
+  /* INVERTED SCROLLBAR */
+  ::-webkit-scrollbar { width: 20px; height: 20px; background: #FF00FF; }
+  ::-webkit-scrollbar-thumb { background: #00FF00; border: 3px solid #FF0000; }
+  ::-webkit-scrollbar-track { background: linear-gradient(#FF0000, #00FF00, #0000FF); }
+
+  /* Low contrast dark mode class */
+  body.dark-mode * {
+    background-color: #0d0d0d !important;
+    color: #111 !important;
+    border-color: #0d0d0d !important;
+    text-shadow: none !important;
+    animation: none !important;
+  }
+</style>
+</head>
+<body>
+
+<!-- CUSTOM TACO CURSOR -->
+<div id="custom-cursor">🌮</div>
+
+<!-- SPINNING STARS -->
+<div class="star-decoration" style="top:200px;left:200px;">⭐</div>
+<div class="star-decoration" style="top:500px;right:300px;animation-duration:0.5s;font-size:60px;">✨</div>
+<div class="star-decoration" style="top:800px;left:800px;animation-direction:reverse;font-size:25px;">🌟</div>
+
+<!-- DARK MODE TOGGLE (invisible text) -->
+<button id="dark-mode-btn" onclick="toggleDarkMode()">DARK MODE (CLICK ME)</button>
+
+<!-- FLOATING NAV FROM HELL -->
+<div id="floating-nav">
+  <strong style="color:#FF0000;display:block;margin-bottom:5px;">☞ NAVIGATE ☜</strong>
+  <a href="#" onclick="moveNav(event)">🏠 Home</a>
+  <a href="#" onclick="moveNav(event)">📧 Contact</a>
+  <a href="#" onclick="moveNav(event)">💰 Buy Now</a>
+  <a href="#" onclick="moveNav(event)">❓ About</a>
+  <a href="#" onclick="moveNav(event)">🔒 Login</a>
+</div>
+
+<!-- CPU MONITOR -->
+<div id="cpu-monitor">
+  ⚠️ CPU TEMP: <span id="cpu-temp">97°C</span><br>
+  🔥 STATUS: <span id="cpu-status">CRITICAL</span><br>
+  💀 RAM: <span id="ram-usage">99%</span> USED
+</div>
+
+<!-- MARQUEE HEADER -->
+<div class="marquee-container">
+  <div class="marquee-line">★★★ WELCOME TO THE BEST WEBSITE IN THE WORLD 2026 AWARD WINNING SITE YOU WONT BELIEVE ★★★ WELCOME TO THE BEST WEBSITE IN THE WORLD 2026 AWARD WINNING SITE YOU WONT BELIEVE ★★★</div>
+  <div class="marquee-line">⚡ FREE DOWNLOAD CLICK HERE ⚡ YOU ARE THE 1,000,000TH VISITOR ⚡ CONGRATULATIONS ⚡ FREE DOWNLOAD CLICK HERE ⚡ YOU ARE THE 1,000,000TH VISITOR ⚡</div>
+  <div class="marquee-line">🔥 EVERYTHING MUST GO SALE 9999% OFF TODAY ONLY 🔥 EVERYTHING MUST GO SALE 9999% OFF TODAY ONLY 🔥 EVERYTHING MUST GO 🔥</div>
+</div>
+
+<!-- UNDER CONSTRUCTION -->
+<div class="under-construction" style="width:5000px;">
+  <div class="cone">🚧</div><div class="cone" style="animation-delay:0.15s;">🚧</div><div class="cone" style="animation-delay:0.3s;">🚧</div>
+  <span>THIS SITE IS UNDER CONSTRUCTION PLEASE EXCUSE THE MESS 🚧 LAST UPDATED: 1997</span>
+  <div class="cone" style="animation-delay:0.45s;">🚧</div><div class="cone" style="animation-delay:0.6s;">🚧</div><div class="cone">🚧</div>
+</div>
+
+<div class="main-wrapper">
+
+  <h1>🌟 WELCOM 2 MY WEBSIT!!!! 🌟</h1>
+  <h1 style="font-size:40px;color:#FF00FF;text-shadow:3px 3px #00FF00;">Est. March 2026 · AWARD WINNING · #1 SITE</h1>
+
+  <div class="content-row">
+
+    <!-- PANEL 1: ABOUT -->
+    <div class="panel">
+      <h2>☞ ABOUT ME ☜</h2>
+      <p class="vibrate">My nam is JOHN and I maked this websit in 1 day!!!</p>
+      <p>I am a PROFESSIONAL web designed with <span class="vibrate">∞ years</span> of experience!!!</p>
+      <p style="color:#FF0000;font-size:30px;animation:blink 0.2s step-start infinite;">BUY MY STUFF!!!</p>
+      <p>This site is best viewed in Internet Explorer 4.0 at 800x600 resolution with Java enabled and Flash Player v1.0 installed on Windows 98 or better.</p>
+      <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200'%3E%3Crect width='200' height='200' fill='%23FF0000'/%3E%3Ctext x='100' y='110' font-size='80' text-anchor='middle' fill='%23FFFF00'%3E😎%3C/text%3E%3C/svg%3E" style="width:100%;animation:titleSpin 3s linear infinite;border:8px dashed #00FF00;" alt="PICTURE OF ME">
+      <p style="font-size:10px;color:#FFFF00;">↑ THIS IS ME (REAL PHOTO DO NOT STEAL)</p>
+    </div>
+
+    <!-- PANEL 2: CONTACT (INVISIBLE INPUT) -->
+    <div class="panel">
+      <h2>📧 CONTAKT ME</h2>
+      <p>Type ur message below (Note: text is invisible for SECURITY REASONS 🔒)</p>
+      <label>Ur Name:<br><input type="text" placeholder="Type here (u cant see it)"></label><br><br>
+      <label>Ur Email (we PROMISE not 2 sell it lol):<br><input type="email" placeholder="email@example.com"></label><br><br>
+      <label>Message (max 3 words):<br>
+        <textarea rows="4" maxlength="15" style="resize:none;background:#FFFF00;color:#FFFF00;"></textarea>
+      </label><br>
+      <p style="font-size:11px;color:#FF9900;">* By typing anything u agree 2 our 47,000-page Terms of Service and consent to receiving 900 emails per day</p>
+      <button class="evil-btn" onclick="startConfirmLoop()">SEND MASSAGE</button>
+    </div>
+
+    <!-- PANEL 3: PHONE NUMBER SLIDER -->
+    <div class="panel">
+      <h2>📞 ENTER UR FONE #</h2>
+      <p>Use the slider to select ur phone number. Be precise!!!</p>
+      <div class="phone-slider-container">
+        <input type="range" id="phone-slider" min="0" max="9999999999" step="1" value="5000000000" oninput="updatePhone(this.value)">
+        <div id="phone-display">050-000-0000</div>
+      </div>
+      <p style="font-size:12px;color:#FF9900;margin-top:10px;">Tip: Your number is 1 in ~10 billion possibilities. Good luck!!! 🎯</p>
+      <p style="font-size:11px;color:#FF0000;">Note: Slider accuracy ±500,000 numbers</p>
+    </div>
+
+    <!-- PANEL 4: PRODUCTS -->
+    <div class="panel">
+      <h2>🛍️ MY PRODUCTS</h2>
+      <div style="background:#FFFF00;color:#FFFF00;padding:10px;margin:5px 0;border:3px solid #FF0000;">
+        <!-- Product descriptions in same color as background -->
+        <strong style="color:#FFFF01;">INVISIBLE PRODUCT 1 - AED 999,999</strong><br>
+        <span style="color:#FFFF01;">A very good product that does things</span>
+      </div>
+      <p style="font-size:9px;color:#00FF00;">★★★★★ "I couldn't read the description but bought it anyway" - Customer</p>
+      <button class="evil-btn" onclick="startConfirmLoop()">ADD 2 CART (CLICK)</button>
+      <br>
+      <div style="background:#FF00FF;color:#FF00FF;padding:10px;border:3px solid #FFFF00;">
+        <strong style="color:#FF00FE;">INVISIBLE PRODUCT 2 - AED 0.01</strong><br>
+        <em style="color:#FF00FE;">*plus AED 50,000 shipping</em>
+      </div>
+      <p style="font-size:9px;color:#00FF00;">★★★★★ "Fast delivery, took only 47 years" - Happy Customer</p>
+    </div>
+
+    <!-- PANEL 5: GUESTBOOK -->
+    <div class="panel">
+      <h2>📖 GUESTBOK!!!</h2>
+      <p style="font-size:12px;">Sign our guestbook!!! 1,000,000+ visitors!!!</p>
+      <div style="background:#000;padding:10px;font-size:11px;color:#00FF00;font-family:'Press Start 2P',monospace;max-height:200px;overflow:hidden;">
+        <p>xXx_c00l_d00d_xXx: gr8 site 10/10<br>
+        webmaster_fan: BEST SITE EVAR<br>
+        anonymous: how do i leave<br>
+        visitor_1999: i am stuck here<br>
+        please_help: the cursor is a taco<br>
+        coolperson99: FREE VIRUS DOWNLOAD?<br>
+        bob: yes<br>
+        <span class="vibrate">ERROR ERROR ERROR ERROR</span></p>
+      </div>
+      <button class="evil-btn" onclick="startConfirmLoop()">SIGN GUESTBOK</button>
+    </div>
+
+    <!-- PANEL 6: POLL -->
+    <div class="panel">
+      <h2>📊 IMPORTENT POLL</h2>
+      <p>What is ur favorite color?</p>
+      <div style="display:flex;flex-direction:column;gap:8px;">
+        <label style="color:#FFFF00;"><input type="radio" name="color" disabled> Magenta (disabled)</label>
+        <label style="color:#FFFF00;"><input type="radio" name="color" disabled> Lime Green (also disabled)</label>
+        <label style="color:#FFFF00;"><input type="radio" name="color" disabled> All of them simultaneously</label>
+        <label style="color:#FFFF00;"><input type="radio" name="color"> None (this one works but does nothing)</label>
+      </div>
+      <button class="evil-btn" onclick="startConfirmLoop()" style="margin-top:20px;">SUBMIT VOTE</button>
+      <p style="font-size:10px;color:#FF9900;">Results: Hidden for competitive reasons</p>
+    </div>
+
+    <!-- PANEL 7: SUBMIT BUTTON (miles away) -->
+    <div class="panel" style="margin-left:1000px;">
+      <h2>✅ FINAL SUBMITT</h2>
+      <p class="vibrate">CONGRATULATIONS!!! You scrolled all the way here!!!</p>
+      <p>You found the submit button!!! Now click it 47 times to confirm ur order.</p>
+      <div id="click-counter-display" style="font-family:'Press Start 2P',monospace;font-size:20px;color:#00FF00;text-align:center;margin:10px 0;">
+        Clicks remaining: <span id="clicks-left">47</span>
+      </div>
+      <button class="evil-btn" id="final-submit-btn" onclick="countClick()">CLICK ME (47x)</button>
+      <div id="progress-bar-container">
+        <div id="progress-bar">LOADING...</div>
+      </div>
+    </div>
+
+    <!-- PANEL 8: EMPTY PANEL (just vibes) -->
+    <div class="panel" style="min-width:300px;min-height:300px;display:flex;align-items:center;justify-content:center;">
+      <div style="text-align:center;">
+        <div style="font-size:80px;animation:starSpin 0.3s linear infinite;">❓</div>
+        <p style="color:#FFFF00;font-family:'Press Start 2P',monospace;font-size:10px;">This panel is intentionally left blank<br><br>(It is not blank)</p>
+      </div>
+    </div>
+
+  </div><!-- end content-row -->
+</div><!-- end main-wrapper -->
+
+<footer>
+  <p style="color:#111;font-size:8px;">© 2026 MY WEBSIT INC. All rights reserved. No part of this website may be reproduced without written permission from the Webmaster (John). This site is protected by 47 layers of encryption and 3 guard dogs. Any unauthorized access will result in a strongly worded letter. Best viewed in Internet Explorer. We are not responsible for any seizures, eye damage, psychological trauma, or existential crises caused by visiting this website. By continuing to view this site you agree that John is the greatest web designer of all time. This footer contains 900 words of legal text but they are all the same color as the background so you can't read them.</p>
+  <p style="color:#333;font-size:6px;">Lorem ipsum dolor sit amet consectetur adipiscing elit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua this is definitely important legal text and not just filler you should read it very carefully especially the part about giving John all your money and also your firstborn child and three goats this is binding by the way clicking anywhere on this website constitutes legal agreement to these terms including the ones we haven't written yet but will make up later if needed</p>
+</footer>
+
+<!-- CAPTCHA OVERLAY -->
+<div id="captcha-overlay">
+  <div class="captcha-box">
+    <h3>⚠️ HUMAN VERIFICATION REQUIRED ⚠️</h3>
+    <p id="captcha-question">Select all squares containing <strong style="color:#FF0000;" id="captcha-target">SADNESS</strong></p>
+    <div class="captcha-grid" id="captcha-grid"></div>
+    <p style="font-size:9px;color:#FF9900;">This CAPTCHA helps protect against robots (and humans). Time limit: ∞ seconds (or until we feel like it)</p>
+    <button onclick="failCaptcha()" style="font-family:'Press Start 2P',monospace;font-size:10px;padding:10px 20px;background:#FF0000;color:#FFFF00;border:3px solid #FFFF00;cursor:none;margin:5px;">VERIFY (probably wont work)</button>
+    <button onclick="closeCaptcha()" style="font-family:'Press Start 2P',monospace;font-size:10px;padding:10px 20px;background:#333;color:#FFFF00;border:3px solid #FF0000;cursor:none;margin:5px;">close (disabled)</button>
+  </div>
+</div>
+
+<!-- CONFIRMATION MODAL -->
+<div id="confirm-modal">
+  <p id="confirm-message">Are you sure?</p>
+  <div id="progress-bar-container-modal" style="display:none;width:100%;background:#000;border:3px solid #FF0000;margin:10px 0;">
+    <div id="progress-bar-modal" style="height:30px;width:0%;background:linear-gradient(to right,#FF0000,#FFFF00);transition:width 0.1s;display:flex;align-items:center;justify-content:center;font-family:'Press Start 2P',monospace;font-size:10px;color:#000;">LOADING...</div>
+  </div>
+  <div id="confirm-buttons">
+    <button onclick="confirmStep()" style="font-family:'Press Start 2P',monospace;font-size:12px;padding:10px 20px;background:#FF0000;color:#FFFF00;border:3px solid #FFFF00;cursor:none;margin:5px;">YES</button>
+    <button onclick="denyStep()" style="font-family:'Press Start 2P',monospace;font-size:12px;padding:10px 20px;background:#333;color:#FFFF00;border:3px solid #FF0000;cursor:none;margin:5px;">NO (makes it worse)</button>
+  </div>
+</div>
+
+<script>
+// ==================== TACO CURSOR ====================
+const cursor = document.getElementById('custom-cursor');
+document.addEventListener('mousemove', e => {
+  cursor.style.left = e.clientX + 'px';
+  cursor.style.top = e.clientY + 'px';
+});
+
+// ==================== INVERTED SCROLL ====================
+let scrollY = 0;
+document.addEventListener('wheel', e => {
+  e.preventDefault();
+  // Inverted, at 1/5th speed
+  window.scrollBy({ top: -e.deltaY * 0.2, left: e.deltaX * 0.2, behavior: 'auto' });
+}, { passive: false });
+
+// ==================== FLOATING NAV (moves on hover) ====================
+const nav = document.getElementById('floating-nav');
+function moveNav(e) {
+  e.preventDefault();
+  const maxX = window.innerWidth - 200;
+  const maxY = window.innerHeight - 200;
+  nav.style.left = Math.random() * maxX + 'px';
+  nav.style.top = Math.random() * maxY + 'px';
+}
+nav.addEventListener('mousemove', () => {
+  const maxX = window.innerWidth - 200;
+  const maxY = window.innerHeight - 200;
+  nav.style.left = Math.random() * maxX + 'px';
+  nav.style.top = Math.random() * maxY + 'px';
+});
+
+// ==================== CPU MONITOR (ANXIETY MACHINE) ====================
+function updateCPU() {
+  const temp = Math.floor(Math.random() * 16) + 90;
+  const ram = Math.floor(Math.random() * 5) + 95;
+  const statuses = ['CRITICAL', 'DANGER', 'MELTDOWN', 'ON FIRE', 'HELP', '💀', 'CALL 911'];
+  document.getElementById('cpu-temp').textContent = temp + '°C';
+  document.getElementById('ram-usage').textContent = ram + '%';
+  document.getElementById('cpu-status').textContent = statuses[Math.floor(Math.random() * statuses.length)];
+}
+setInterval(updateCPU, 800);
+
+// ==================== PHONE SLIDER ====================
+function updatePhone(val) {
+  const num = parseInt(val);
+  const area = String(Math.floor(num / 10000000)).padStart(3, '0').slice(0,3);
+  const mid = String(Math.floor((num % 10000000) / 10000)).padStart(3,'0').slice(0,3);
+  const end = String(num % 10000).padStart(4,'0').slice(0,4);
+  document.getElementById('phone-display').textContent = `0${area}-${mid}-${end}`;
+}
+
+// ==================== CAPTCHA ====================
+const captchaTargets = [
+  'SADNESS', 'THE COLOR #F0F0F0', 'JOY (ironic)', 'EMPTINESS',
+  'WIFI SIGNAL', 'THE CONCEPT OF TIME', 'A VALID REASON TO CONTINUE',
+  'REGRET', '404 ERROR', 'YOUR WILL TO LIVE'
+];
+const captchaEmojis = ['😊','🌈','🎯','🔮','💭','🌊','🎪','🦄','🎭','🌀','⚡','🎲','🔥','💫','🎸','🌙'];
+
+function showCaptcha() {
+  const overlay = document.getElementById('captcha-overlay');
+  const grid = document.getElementById('captcha-grid');
+  const target = captchaTargets[Math.floor(Math.random() * captchaTargets.length)];
+  document.getElementById('captcha-target').textContent = target;
+  grid.innerHTML = '';
+  for(let i = 0; i < 12; i++) {
+    const cell = document.createElement('div');
+    cell.className = 'captcha-cell';
+    cell.textContent = captchaEmojis[Math.floor(Math.random() * captchaEmojis.length)];
+    cell.onclick = () => cell.classList.toggle('selected');
+    grid.appendChild(cell);
+  }
+  overlay.classList.add('show');
+}
+
+function failCaptcha() {
+  const messages = [
+    'WRONG. Try again.',
+    'Incorrect. Are you even human?',
+    'That is NOT sadness. That is clearly joy.',
+    'Server error: Too many clicks.',
+    'CAPTCHA refreshed. Good luck.',
+    'Please select all images NOT containing pixels.',
+    'Verification failed. Starting over.',
+  ];
+  document.getElementById('captcha-target').textContent = captchaTargets[Math.floor(Math.random() * captchaTargets.length)];
+  alert(messages[Math.floor(Math.random() * messages.length)]);
+  showCaptcha();
+}
+function closeCaptcha() {
+  // Does nothing
+  alert('The close button is decorative. Please complete the CAPTCHA.');
+}
+
+// Show CAPTCHA every 30 seconds
+setInterval(showCaptcha, 30000);
+
+// ==================== CONFIRMATION LOOP ====================
+let confirmStep = 0;
+const confirmMessages = [
+  'Are you sure?',
+  'Are you REALLY sure?',
+  'Are you absolutely, positively sure?',
+  'Have you consulted a professional about this decision?',
+  'Your mouse has moved since you last clicked. Are you still sure?',
+  'Error: User too sure. Please reconsider.',
+];
+
+function startConfirmLoop() {
+  confirmStep = 0;
+  const modal = document.getElementById('confirm-modal');
+  document.getElementById('confirm-message').textContent = confirmMessages[0];
+  document.getElementById('progress-bar-container-modal').style.display = 'none';
+  document.getElementById('confirm-buttons').style.display = 'block';
+  modal.classList.add('show');
+}
+
+window.confirmStep = function() {
+  confirmStep++;
+  const modal = document.getElementById('confirm-modal');
+  if(confirmStep < confirmMessages.length - 1) {
+    document.getElementById('confirm-message').textContent = confirmMessages[confirmStep];
+  } else {
+    // Final step: fake loading bar
+    document.getElementById('confirm-message').textContent = 'Processing your request...';
+    document.getElementById('confirm-buttons').style.display = 'none';
+    const progressContainer = document.getElementById('progress-bar-container-modal');
+    const progressBar = document.getElementById('progress-bar-modal');
+    progressContainer.style.display = 'block';
+    let progress = 0;
+    const interval = setInterval(() => {
+      progress += Math.random() * 3;
+      if(progress >= 100) {
+        clearInterval(interval);
+        document.getElementById('confirm-message').textContent = '❌ ERROR: User too sure. Please try again.';
+        progressContainer.style.display = 'none';
+        document.getElementById('confirm-buttons').style.display = 'block';
+        confirmStep = 0;
+        document.getElementById('confirm-message').textContent = confirmMessages[0];
+      } else {
+        progressBar.style.width = progress + '%';
+      }
+    }, 100);
+  }
+};
+
+window.denyStep = function() {
+  document.getElementById('confirm-message').textContent = 'We have added 10 more confirmation steps for your safety.';
+  confirmMessages.splice(1, 0, 'Are you sure you want to say no?', 'Saying no has consequences.', 'Your ISP has been notified.', 'Reversing the no... please wait.', '...', 'Did it work?', 'Please confirm your no.', 'No confirmed. Just kidding. Are you sure?', 'One more step.', 'Almost there!');
+  setTimeout(() => {
+    document.getElementById('confirm-message').textContent = confirmMessages[0];
+  }, 2000);
+};
+
+// ==================== CLICK COUNTER FOR FINAL SUBMIT ====================
+let clicksLeft = 47;
+window.countClick = function() {
+  clicksLeft--;
+  document.getElementById('clicks-left').textContent = clicksLeft;
+  if(clicksLeft <= 0) {
+    document.getElementById('progress-bar-container').classList.add('show');
+    const bar = document.getElementById('progress-bar');
+    let p = 0;
+    document.getElementById('final-submit-btn').disabled = true;
+    const iv = setInterval(() => {
+      p += Math.random() * 5;
+      bar.style.width = Math.min(p, 99) + '%';
+      if(p >= 99) {
+        clearInterval(iv);
+        setTimeout(() => {
+          bar.style.width = '0%';
+          clicksLeft = 47;
+          document.getElementById('clicks-left').textContent = 47;
+          document.getElementById('final-submit-btn').disabled = false;
+          document.getElementById('progress-bar-container').classList.remove('show');
+          alert('❌ SESSION EXPIRED. Please click 47 times again.');
+        }, 500);
+      }
+    }, 150);
+  }
+};
+
+// ==================== MOUSE WARNINGS ====================
+let warningCooldown = false;
+document.addEventListener('mousemove', e => {
+  if(warningCooldown) return;
+  if(Math.random() > 0.98) {
+    warningCooldown = true;
+    const warning = document.createElement('div');
+    warning.className = 'mouse-warning';
+    warning.textContent = '⚠️ WARNING: You are moving the mouse';
+    warning.style.left = e.clientX + 20 + 'px';
+    warning.style.top = e.clientY + 20 + 'px';
+    document.body.appendChild(warning);
+    setTimeout(() => { warning.remove(); warningCooldown = false; }, 1500);
+  }
+});
+
+// ==================== DARK MODE (Low contrast nightmare) ====================
+window.toggleDarkMode = function() {
+  document.body.classList.toggle('dark-mode');
+};
+
+// ==================== RANDOM ALERT ON PAGE LOAD ====================
+window.addEventListener('load', () => {
+  setTimeout(() => {
+    alert('🎉 CONGRATULATIONS! You are visitor #1,000,000! Please call 1-800-SCAM-YOU to claim your prize!');
+  }, 2000);
+  setTimeout(() => {
+    alert('⚠️ WARNING: Your computer may have 47 viruses. Click OK to not remove them.');
+  }, 5000);
+});
+
+// ==================== TITLE FLASHER ====================
+const titles = [
+  'WELCOM 2 MY WEBSIT!!!!',
+  '⚠️ DANGER ZONE ⚠️',
+  'YOU ARE THE 1,000,000TH VISITOR!!!',
+  'BUY NOW!!! LIMITED TIME!!!',
+  '🔥 EVERYTHING ON FIRE 🔥',
+  'plz dont leave',
+  'ARE U STILL THERE??',
+  '💀 WEBSITE.EXE 💀',
+];
+let titleIdx = 0;
+setInterval(() => {
+  document.title = titles[titleIdx++ % titles.length];
+}, 1000);
+</script>
+
+</body>
+</html>
